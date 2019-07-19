@@ -23,13 +23,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('pendidikan', 'PendidikanController');
 route::resource('artikel', 'ArtikelController');
 
-Route::group(['middleware' => 'cors'], function () {
-    route::resource('/artikel', 'ArtikelAPIController');
-    route::resource('/kategori', 'KategoriKontroller');
-    route::resource('/tag', 'TagKontroller');
-    Route::resource('siswa', 'SiswaController');
-    Route::resource('pendidikan', 'PendidikanController');
-    route::resource('artikel', 'ArtikelController');
-});
+// Route::group(['middleware' => 'cors'], function () {
+//     route::resource('/artikel', 'ArtikelAPIController');
+//     route::resource('/kategori', 'KategoriKontroller');
+//     route::resource('/tag', 'TagKontroller');
+//     Route::resource('siswa', 'SiswaController');
+//     Route::resource('pendidikan', 'PendidikanController');
+//     route::resource('artikel', 'ArtikelController');
+// });
 
 Route::get('beritaterbaru','FrontendController@berita');
